@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			body {margin: 0;}
+			a {text-decoration: none;}
+			p {margin: 0;}
+			ul {list-style: none; margin: 0; padding-left: 0;}
+
+			.title {font-weight: bold;}
+
+			body>div#data {
+				background-color: #FFF;
+				padding: 8px;
+				margin-bottom: 5em;
+				box-shadow: 0px 0px 4px 2px #888;
+			}
+			body>div#data>div {
+				padding: 8px;
+			}
+
+			/* list */
+			ul.list img {
+				width: 0.8em;
+				vertical-align: middle;
+				padding: 0.4em;
+			}
+			ul.list>* {
+				font-size: 1.2em;
+				margin-bottom: 0.2em;
+			}
+
+			ul.grid {
+				display: flex;
+				flex-wrap: wrap;
+			}
+			ul.grid>li {
+				padding: 1em 1.2em;
+			}
+
+			/* projects */
+			ul.projects>li {
+
+			}
+			ul.projects>li img {
+				width: 3em;
+				vertical-align: text-bottom;
+			}
+			ul.projects>li p.title {
+				display: inline-block;
+				font-size: 1.4em;
+			}
+
+			/* footer */
+			div#footer {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				left: 0; top: 0;
+				background-color: #DDD;
+				display: flex;
+				z-index: -1;
+			}
+			div#footer p {
+				width: 100%;
+				margin-top: auto;
+				color: #222D;
+				text-align: center;
+				font-size: 0.9em;
+			}
+		</style>
+
+		<!-- script -->
+		<script>
+			window.onload = ()=> {
+				// set age
+				document.getElementById("age").innerText =
+					`(満 ${getMyRealAge()}歳)`;
+			}
+
+			/* get real age */
+			function getMyRealAge() {
+				const today = new Date(),
+					year  = today.getFullYear(),
+					month = today.getMonth+1,
+					date  = today.getDate();
+
+				return ((month*100 + date) < 320) ? year-1996 : year-1995;
+			}
+		</script>
+	</head>
+	<body>
+		<div id="data">
+			<div>
+				<h1>CHOI JONG HYEON</h1>
+			</div>
+			<!-- about me -->
+			<div>
+				<h2 class="head-subject">ABOUT ME</h2>
+				<ul class="list about">
+					<li>
+						<img src="./images/person.svg" alt="Name">
+						<span>Choi Jong Hyeon</span>
+					</li>
+					<li>
+						<img src="./images/cake.svg" alt="Birthday">
+						<span>1995.03.20 <span id="age"></span></span>
+					</li>
+					<li>
+						<img src="./images/phone.svg" alt="Cellphone number">
+						<span>+81-70-3270-5813</span>
+					</li>
+					<li>
+						<img src="./images/mail.svg" alt="Email address">
+						<span>hee950320@yahoo.co.jp</span>
+					</li>
+					<li><a href="https://github.com/hee-develop" target="_">
+						<img src="./images/github.svg" alt="Github address">
+						<span>hee-develop</span></a>
+					</li>
+					<li>
+						<img src="./images/university.svg" alt="University">
+						<span>Kwangwoon University, Computer Engineering</span>
+					</li>
+				</ul>
+			</div>
+
+			<!-- history -->
+			<div>
+
+			</div>
+
+			<!-- skills -->
+			<div>
+				<ul class="grid skills">
+					<li>
+						<p>Java</p>
+					</li>
+					<li>
+						<p>C</p>
+					</li>
+					<li>
+						<p>C++</p>
+					</li>
+					<li>
+						<p>JS</p>
+					</li>
+					<li>
+						<p>HTML</p>
+					</li>
+					<li>
+						<p>MySQL</p>
+					</li>
+					<li>
+						<p>Verilog</p>
+					</li>
+					<li>
+						<p>ARM Assembly</p>
+					</li>
+				</ul>
+			</div>
+
+			<!-- projects -->
+			<div>
+				<ul class="grid projects">
+					<li>
+						<img src="https://lh3.googleusercontent.com/bTBXCse9eNpVkIUJNo_EEQQK4CnFPaOe0sL2t46O4iAnsHJIBH38kAUjSBLcDLt_w8Oi=s360">
+						<p class="title">KW Notify</p>
+						<p class="content">
+							Android notification application for Kwangwoon University<br>
+							using jsoup(HTML parse) and FCM(push server)
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- footer -->
+		<div id="footer">
+			<p>
+				License<br>
+				Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> and <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+			</p>
+		</div>
+	</body>
+</html>
