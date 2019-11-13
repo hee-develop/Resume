@@ -3,7 +3,8 @@
 	<head>
 		<style>
 			body {margin: 0;}
-			a {text-decoration: none;}
+			a, a:link, a:active {text-decoration: none; color: inherit; display: inline-block;}
+			a:hover {background-color: #DDD; color: #555; border-radius: 2px; box-shadow: 0 1px 4px #888;}
 			p {margin: 0;}
 			ul {list-style: none; margin: 0; padding-left: 0;}
 
@@ -27,28 +28,39 @@
 			}
 			ul.list>* {
 				font-size: 1.2em;
-				margin-bottom: 0.2em;
+				padding: 4px 2px;
 			}
 
 			ul.grid {
 				display: flex;
 				flex-wrap: wrap;
 			}
-			ul.grid>li {
+			/* skills */
+			ul.skills li {
 				padding: 1em 1.2em;
 			}
 
-			/* projects */
-			ul.projects>li {
+			/* about me */
+			ul.about span {
+				padding: 6px;
+			}
 
+			/* projects */
+			ul.projects li a {
+				padding: 8px;
 			}
 			ul.projects>li img {
-				width: 3em;
-				vertical-align: text-bottom;
+				margin: 4px;
+				width: 2.4em;
+				vertical-align: middle;
 			}
 			ul.projects>li p.title {
 				display: inline-block;
 				font-size: 1.4em;
+				vertical-align: middle;
+			}
+			ul.projects>li p.content {
+				padding: 0.4em 0.4em;
 			}
 
 			/* footer */
@@ -163,13 +175,13 @@
 			<!-- projects -->
 			<div>
 				<ul class="grid projects">
-					<li>
+					<li><a href="./pages/kw-notify.html">
 						<img src="https://lh3.googleusercontent.com/bTBXCse9eNpVkIUJNo_EEQQK4CnFPaOe0sL2t46O4iAnsHJIBH38kAUjSBLcDLt_w8Oi=s360">
 						<p class="title">KW Notify</p>
 						<p class="content">
 							Android notification application for Kwangwoon University<br>
 							using jsoup(HTML parse) and FCM(push server)
-						</p>
+						</p></a>
 					</li>
 				</ul>
 			</div>
