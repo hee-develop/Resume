@@ -7,14 +7,42 @@
 			a:hover {background-color: #DDD; color: #555; border-radius: 2px; box-shadow: 0 1px 4px #888;}
 			p {margin: 0;}
 			ul {list-style: none; margin: 0; padding-left: 0;}
+			h1,h2,h3,h4 {margin: 0; letter-spacing: 0.05em;}
+			h1 {font-size: 2em;}
+			h2,h3 {font-size: 1.2em;}
+			h3 {margin: 0.8em 0 0.2em;}
+			h4 {font-size: 1em; font-weight: normal;}
 
-			.title {font-weight: bold;}
+			/* title */
+			div#title {
+				height: 5.6em;
+				box-shadow: 0 1px 2px #888;
+				margin-bottom: 8px;
+				padding-top: 0.2em;
+				background-color: #841b20;
+				color: #FFF;
+			}
+			div#title>img {
+				width: 4.8em;
+				float: left;
+				padding: 0.2em 0.4em 0.4em 0.2em;
+			}
+			div#title>h1,
+			div#title>h2 {
+				text-shadow: 0px 1px 2px #222A;
+			}
 
-			img#title-icon {width: 6em; float: left;}
-			h1 {font-size: 2em; margin: 0;}
-			h2 {font-size: 1.2em; margin: 0;}
+			/* gallery */
+			div#gallery {
+				white-space: nowrap;
+				overflow-x: scroll;
+			}
+			div#gallery img {
+				width: 20%;
+			}
 
-			h3 {font-size: 1.2em; margin: 0;}
+			/* description */
+			
 
 			div.list {
 				display: grid;
@@ -28,18 +56,49 @@
 		</script>
 	</head>
 	<body>
-		<img id="title-icon" src="https://lh3.googleusercontent.com/bTBXCse9eNpVkIUJNo_EEQQK4CnFPaOe0sL2t46O4iAnsHJIBH38kAUjSBLcDLt_w8Oi=s360">
-		<h1>Kwangwoon Notify</h1>
-		<h2>광운알리미</h2>
+		<div id="title">
+			<img src="../images/kwnotify/kwn_icon.png">
+			<h1>Kwangwoon Notify</h1>
+			<h2>광운알리미</h2>
+		</div>
+
+		<!-- example image -->
+		<div id="gallery">
+			<img src="../images/kwnotify/kwn_01.png">
+			<img src="../images/kwnotify/kwn_02.png">
+			<img src="../images/kwnotify/kwn_03.png">
+			<img src="../images/kwnotify/kwn_04.png">
+			<img src="../images/kwnotify/kwn_05.png">
+			<img src="../images/kwnotify/kwn_06.png">
+			<img src="../images/kwnotify/kwn_07.png">
+		</div>
+
+		<!-- description -->
+		<div id="description">
+			<h3>Description</h3>
+			<h4>
+				Kwangwoon Notify is an unofficial application that designed to improve accessibility to various services in the university.<br>
+				This provides to notify new notification via the push server.<br>
+				And this includes QR code identification for library, university's schedule, telephone numbers in each department, and U-CAMPUS for check new assignment.
+			</h4>
+		</div>
 
 		<!-- technical -->
 		<div style="clear: left;">
-			<h3></h3>
+			<h3>Used</h3>
 			<div class="list">
 				<span>Client</span><span>Android</span>
 				<span>Server(parsing)</span><span>Node.js on AWS</span>
 				<span>Server(push)</span><span>Google Firebase Cloud Messaging</span>
 				<span>DB</span><span>MySQL</span>
+			</div>
+			<h3>Open Source</h3>
+			<div class="list">
+				<span>uCrop</span><span>for crop profile image</span>
+				<span>Retrofit</span><span>for using login to U-CAMPUS</span>
+				<span>Jsoup</span><span>for parse XML and HTML</span>
+				<span>Firebase messaging</span><span>for receive push message</span>
+				<span>CircleImageView</span><span>for display a circle image(for profile)</span>
 			</div>
 		</div>
 
